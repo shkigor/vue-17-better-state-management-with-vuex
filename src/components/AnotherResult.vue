@@ -9,13 +9,14 @@
   import { mapGetters } from 'vuex';
 
   export default {
-    computed: mapGetters(
+    computed: {
+      ...mapGetters(
         // [ 'doubleCounter', 'stringCounter' ]
         // we can also pass an Object and map the Getters to different Names
-      {
-        doubleCounter: 'doubleCounter',
-        stringCounter: 'stringCounter'
-      }
-    )
+        {
+          doubleCounter: 'doubleCounter',
+          stringCounter: 'stringCounter'
+        })
+    }
   }
 </script>
