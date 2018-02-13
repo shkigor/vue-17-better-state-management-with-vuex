@@ -6,14 +6,14 @@
 </template>
 
 <script>
-    export default {
-        methods: {
-            increment() {
-                this.$store.commit('increment');
-            },
-            decrement() {
-              this.$store.commit('decrement');
-            }
+export default {
+    methods: {
+        increment() {
+            this.$store.commit('increment');
+        },
+        decrement() {
+            this.$store.commit('decrement');
         }
     }
+}
 </script>
