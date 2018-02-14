@@ -9,7 +9,8 @@
         <app-counter></app-counter>
         <app-another-counter></app-another-counter>
         <hr>
-        <input type="text" :value="value">
+        <input type="text" :value="value" @input="updateValue">
+        <p>{{ value }}</p>
       </div>
     </div>
   </div>
@@ -25,6 +26,11 @@
     computed: {
         value() {
             return this.$store.getters.value;
+        }
+    },
+    methods: {
+        updateValue(event) {
+            this.$store.dispatch('updateValue', event.target.value);
         }
     },
     components: {
